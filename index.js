@@ -52,7 +52,8 @@ const paraDiv = document.createElement("p");
 paraDiv.id = "para";
 paraDiv.style.fontWeight = "bold";
 paraDiv.style.fontSize = "15px";
-paraDiv.style.background = "#000ffe";
+paraDiv.style.background = "#000eee";
+paraDiv.style.padding = "";
 document.getElementById("container").appendChild(paraDiv);
 
 const buttonContainer = document.createElement("div");
@@ -60,6 +61,7 @@ buttonContainer.id = "butcon";
 buttonContainer.style.display = "flex";
 buttonContainer.style.justifyContent = "space-between";
 buttonContainer.style.gridColumn = "span 4";
+buttonContainer.style.gap = "10px";
 document.getElementById("container").appendChild(buttonContainer);
 
 const buttton = document.createElement("button");
@@ -99,8 +101,5 @@ function greetingText() {
 
 function closeGreetings() {
   const inputField = document.getElementById("para");
-  inputField.textContent = "";
-  //   let anotherImage = document.createElement("img");
-  //   anotherImage.src = "rose.svg";
-  //   document.getElementById("para").appendChild(anotherImage);
+  inputField.textContent = alert("Fuck");
 }
