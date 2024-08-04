@@ -52,8 +52,7 @@ const paraDiv = document.createElement("p");
 paraDiv.id = "para";
 paraDiv.style.fontWeight = "bold";
 paraDiv.style.fontSize = "15px";
-paraDiv.style.background = "#000eee";
-paraDiv.style.padding = "";
+
 document.getElementById("container").appendChild(paraDiv);
 
 const buttonContainer = document.createElement("div");
@@ -96,10 +95,43 @@ function greetingText() {
     "How are you doing Micheal hope you Good Sorry it came late";
   paraGraph.id = "para";
   paraGraph.style.gridColumn = "span 5";
+  paraGraph.style.background = "#935351";
+  paraGraph.style.color = "#fff";
+  paraGraph.style.padding = "10px";
+  paraGraph.style.borderRadius = "15px";
   document.getElementById("container").appendChild(paraGraph);
 }
 
 function closeGreetings() {
   const inputField = document.getElementById("para");
-  inputField.textContent = alert("Fuck");
+  inputField.textContent = alert("And Fuck You for Closing Me");
+}
+
+{
+  /* <script>
+const getBrowserName = () => {
+  let browserInfo = navigator.userAgent;
+  let browser;
+  if (browserInfo.includes('Opera') || browserInfo.includes('Opr')) {
+    browser = 'Opera';
+  } else if (browserInfo.includes('Edg')) {
+    browser = 'Edge';
+  } else if (browserInfo.includes('Chrome')) {
+    browser = 'Chrome';
+  } else if (browserInfo.includes('Safari')) {
+    browser = 'Safari';
+  } else if (browserInfo.includes('Firefox')) {
+    browser = 'Firefox'
+  } else {
+    browser = 'unknown'
+  }
+    return browser;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let content = document.querySelector("#content");
+  const browserName = getBrowserName();
+  content.innerHTML = `You are currently on a ${browserName} browser`;
+});
+</script> */
 }
