@@ -7,7 +7,9 @@ div.id = "container";
 div.style.width = "full";
 div.style.display = "grid";
 div.style.justifyItems = "center";
+div.style.gap = "10px";
 div.style.gridTemplateColumns = "repeat(4, minmax(0, 1fr))";
+div.style.padding = "20px";
 div.style.background = "#a15f5f";
 document.querySelector("body").appendChild(div);
 
@@ -50,13 +52,15 @@ const paraDiv = document.createElement("p");
 paraDiv.id = "para";
 paraDiv.style.fontWeight = "bold";
 paraDiv.style.fontSize = "15px";
-paraDiv.style.color = "green";
-document.querySelector("container").appendChild(paraDiv);
+paraDiv.style.background = "#000ffe";
+document.getElementById("container").appendChild(paraDiv);
 
-// const greetingText = document.createElement("p");
-// greetingText.textContent = document
-//   .getElementById("container")
-//   .appendChild(greetingText);
+const buttonContainer = document.createElement("div");
+buttonContainer.id = "butcon";
+buttonContainer.style.display = "flex";
+buttonContainer.style.justifyContent = "space-between";
+buttonContainer.style.gridColumn = "span 4";
+document.getElementById("container").appendChild(buttonContainer);
 
 const buttton = document.createElement("button");
 buttton.textContent = "Click Me for More";
@@ -69,12 +73,34 @@ buttton.style.margin = "20px 0px 10px 0px";
 buttton.style.borderColor = "white";
 buttton.style.background = "black";
 buttton.style.color = "white";
-document.getElementById("container").appendChild(buttton);
+document.getElementById("butcon").appendChild(buttton);
+
+const closeButtton = document.createElement("button");
+closeButtton.textContent = "Click To Close";
+closeButtton.style.padding = "10px 8px";
+closeButtton.id = "buttons";
+closeButtton.onclick = closeGreetings;
+closeButtton.style.gridColumn = "span 4";
+closeButtton.style.borderRadius = "20px";
+closeButtton.style.margin = "20px 0px 10px 0px";
+closeButtton.style.borderColor = "white";
+closeButtton.style.background = "black";
+closeButtton.style.color = "white";
+document.getElementById("butcon").appendChild(closeButtton);
 
 function greetingText() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
     "How are you doing Micheal hope you Good Sorry it came late";
   paraGraph.id = "para";
-  document.querySelector("body").appendChild(paraGraph);
+  paraGraph.style.gridColumn = "span 5";
+  document.getElementById("container").appendChild(paraGraph);
+}
+
+function closeGreetings() {
+  const inputField = document.getElementById("para");
+  inputField.textContent = "";
+  //   let anotherImage = document.createElement("img");
+  //   anotherImage.src = "rose.svg";
+  //   document.getElementById("para").appendChild(anotherImage);
 }
